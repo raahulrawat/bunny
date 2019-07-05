@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+         <form action = "/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit" />
+      </form><br>
+      <br><br><br>
+    <mark>Let's create a beautiful Art</mark>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <i class="fas fa-robot fa-10x" style="color: Black"></i>
+
+         <p style="color: Black"> <i class="fas fa-blog fa-2x"></i>UNN<i class="fab fa-yammer fa-2x"></i></p>
+
+      <p style="color: Black">THE <i class="fab fa-adn fa-2x" ></i>.rt.<i class="fas fa-info-circle fa-2x" ></i>.st</p>
+      <p style="color: Black">Developed By <a href="https://raahulrawat.github.io/">Rahul Rawat</a> <a href="https://github.com/raahulrawat"><i class="fab fa-github fa-2x"></i> </a></p>
+  </div>
+
+</div>
+
+</body>
+</html>

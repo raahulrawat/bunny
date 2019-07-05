@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="refresh" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<script>
+// location.reload(true);
+
+</script>
+    <style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+</style>
+</head>
+
+<div class="split left">
+  <div class="centered">
+<h2 style="color: #708BDA"> Click on Art to Download</h2> 
+<form action = "/main" method = "GET"
+         enctype = "multipart/form-data">
+        <p align="right"> Try for Another image click here
+         <input type = "submit"/>
+      </form>
+      <a href="static/output/processed.png" download>
+  <img src="static/output/processed.png" id="frame" alt=" ">
+</a>
+<script>        
+  // Use an off-screen image to load the next frame.
+  var img = new Image();
+
+  // When it is loaded...
+  img.addEventListener("load", function() {
+
+      // Set the on-screen image to the same source. This should be instant because
+      // it is already loaded.
+      document.getElementById("frame").src = img.src;
+
+      // Schedule loading the next frame.
+      setTimeout(function() {
+          img.src = "static/output/processed.png?" + (new Date).getTime();
+      }, 1000/15); // 15 FPS (more or less)
+  })
+
+  // Start the loading process.
+  img.src = "static/output/processed.png?" + (new Date).getTime();
+</script>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <i class="fas fa-robot fa-10x" style="color: Black"></i>
+
+         <p style="color: Black"> <i class="fas fa-blog fa-2x"></i>UNN<i class="fab fa-yammer fa-2x"></i></p>
+
+      <p style="color: Black">THE <i class="fab fa-adn fa-2x" ></i>.rt.<i class="fas fa-info-circle fa-2x" ></i>.st</p>
+  <p style="color: Black">Developed By <a href="https://raahulrawat.github.io/">Rahul Rawat</a> <a href="https://github.com/raahulrawat"><i class="fab fa-github fa-2x"></i> </a></p>
+  </div>
+
+</div>
+
+</body>
+
+</html>

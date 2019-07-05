@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="split left">
+<!-- Block 1-->
+    <div class="w3-container">
+  <h2 style="color: #708BDA">Style selection (Please select one style)</h2>
+  <p style="color: #708BDA">Explore your imagination with these styles</p>
+  <div class="w3-card" style="width:50%">
+    <img src="static/img/1.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 1</b></h4>
+
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+  <input type="checkbox" name = "check" value="the_scream.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+
+    </div>
+  </div>
+  <br>
+
+<!--Block 2-->
+  <div class="w3-card-4" style="width:50%">
+    <img src="static/img/2.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 2</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="the_wave.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+
+        <!--Block3-->
+    <div class="w3-card-4" style="width:50%">
+    <img src="static/img/candy.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 3</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="candy.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+
+<!--Block4-->
+  <div class="w3-card-4" style="width:50%">
+    <img src="static/img/composition.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 4</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="composition_vii.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+<!--Block5-->
+  <div class="w3-card-4" style="width:50%">
+    <img src="static/img/feathers.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 5</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="feathers.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+    <!--Block6-->  <div class="w3-card-4" style="width:50%">
+    <img src="static/img/Mosaic.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 6</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="la_muse.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+            <!--Block7-->
+          <div class="w3-card-4" style="width:50%">
+    <img src="static/img/Muse.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 7</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="mosaic.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+
+    <!--Block8-->
+  <div class="w3-card-4" style="width:50%">
+    <img src="static/img/night.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 8</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="starry_night.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+    <!--Block9-->
+  <div class="w3-card-4" style="width:50%">
+    <img src="static/img/udine.png" alt="Person" style="width:100%">
+    <div class="w3-container">
+      <h4><b>Style 9</b></h4>
+       <form action = "/download" method = "POST"
+         enctype = "multipart/form-data">
+        <p align="right"><label class="switch">
+          <input type="checkbox" name="check" value="udnie.t7">
+  <span class="slider round"></span>
+</label>
+         <input type = "submit" />
+      </form>
+
+</p>
+    </div>
+  </div>
+<!--Block 9 ends here!!!-->
+
+</div>
+
+
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <i class="fas fa-robot fa-10x" style="color: Black"></i>
+
+         <p style="color: Black"> <i class="fas fa-blog fa-2x"></i>UNN<i class="fab fa-yammer fa-2x"></i></p>
+
+      <p style="color: Black">THE <i class="fab fa-adn fa-2x" ></i>.rt.<i class="fas fa-info-circle fa-2x" ></i>.st</p>
+  <p style="color: Black">Developed By <a href="https://raahulrawat.github.io/">Rahul Rawat</a> <a href="https://github.com/raahulrawat"><i class="fab fa-github fa-2x"></i> </a></p>
+  </div>
+</div>
+
+</body>
+</html>

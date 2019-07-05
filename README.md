@@ -1,7 +1,7 @@
 # bunny
 ```
-Neural Style Transfer using Opencv and Transfer learning```
-
+Neural Style Transfer using Opencv and Transfer learning
+```
 ```
 Reuirements:
 Click==7.0

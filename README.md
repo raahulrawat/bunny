@@ -34,3 +34,7 @@ run serve.py
 open http://localhost:5001 and start uploading your own images.
 
 ```
+
+<p align="center">
+  <img src="https://github.com/raahulrawat/Travl/blob/master/Travl.png" width="950" alt="accessibility text">
+</p>
